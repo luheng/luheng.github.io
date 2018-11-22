@@ -1,21 +1,252 @@
----
-layout: post
-title: Luheng's Blog
----
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">    
-      
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-      <div class="entry">
-        {{ post.content | truncatewords:40}}
-      </div>
-      
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <title>Luheng's Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body> 
+ 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Luheng's Homepage</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Short Bio</a></li>
+        <li><a href="#publications">Publications</a></li>     
+        <li><a href="#personal">Personal</a></li>     
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+ 
+<div class="container">
+  <div class="simple">
+ 	 <div class="row">
+        <div class="col-sm-4">
+            <img  class="img-thumbnail" src="images/luheng_2017.jpg" width="320"/>
+         </div> <!--.col-sm-4-->
+       <div class="col-sm-6">
+	       <h1>Luheng He</h1>
+         <img  class="img-responsive" src="images/hlh.png" width="100"/> 
+         <br>
+	    <p>
+	      I am a final year Ph.D. student in the Department of <a href=https://www.cs.washington.edu/>Computer Science and Engineering</a> at
+	      the University of Washington, advised by Prof. <a href=https://www.cs.washington.edu/people/faculty/lsz>Luke Zettlemoyer</a>.
+	      My research interests include natural language processing and computational linguistics. <!--b>I will be joining Google MTV as a research scientist in July 2018!</b>-->
+	     <br>	     
+	    </p>
+	    <a href="files/cv_luheng_2017.pdf"> [curriculum vitae] </a> 
+		<p>Email: first_name at cs dot washington dot edu</p>
+	   </div> <!--.col-sm-4-->
+	</div> <!--/.row-->
+  </div><!-- /.simple -->
+</div><!-- /.container -->
+  
+
+<div class="container" id="publications">
+  <div class="simple">
+  <h2>Publications </h2> 
+  
+  <h3>Models for Semantics and Discourse</h3> 
+  
+  <p>
+  <a href="https://arxiv.org/abs/1804.05392">Higher-order Coreference Resolution with Coarse-to-fine Inference</a><br>
+  Kenton Lee, <b>Luheng He</b>, and Luke Zettlemoyer. <br>
+  Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL), 2018. <br>
+    <!--a href="https://github.com/kentonl/e2e-coref">[Kenton's code]</a> -->
+    <!-- <a href="https://kentonl.github.io/e2e-coref">[demo]</a> -->
+	<a data-toggle="collapse" data-target="#naacl2018_lhz_bib">[bibtex]</a>
+  </p>
+	<div id="naacl2018_lhz_bib" class="collapse">
+        @inproceedings{lee2018higer, <br>
+  			title={Higher-order Coreference Resolution with Coarse-to-fine Inference}, <br>
+  			author={Kenton Lee and Luheng He and Luke S. Zettlemoyer}, <br>
+            booktitle={Proceedings of the 2018 Annual Conference of the North American Chapter of the Association for Computational Linguistics}, <br>
+            year={2018} <br>
+        }
+        <br>
+     </div>
+
+  <p>
+  <a href="files/emnlp2017_lhlz.pdf">End-to-end Neural Coreference Resolution</a><br>
+  Kenton Lee, <b>Luheng He</b>, Mike Lewis, and Luke Zettlemoyer. <br>
+  Conference on Empirical Methods in Natural Language Processing (EMNLP), 2017. <br>
+    <a href="https://github.com/kentonl/e2e-coref">[Kenton's code]</a>
+    <a href="https://kentonl.github.io/e2e-coref">[demo]</a>
+	<a data-toggle="collapse" data-target="#emnlp2017_lhlz_bib">[bibtex]</a>
+  </p>
+	<div id="emnlp2017_lhlz_bib" class="collapse">
+        @inproceedings{lee2017end, <br>
+  			title={End-to-end Neural Coreference Resolution}, <br>
+  			author={Kenton Lee and Luheng He and Mike Lewis and Luke S. Zettlemoyer}, <br>
+            booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing}, <br>
+            year={2017} <br>
+        }
+        <br>
+     </div>
+
+  <p>
+  <a href="files/acl2017_hllz.pdf">Deep Semantic Role Labeling: What Works and What's Next</a><br>
+  <b>Luheng He</b>, Kenton Lee, Mike Lewis, and Luke Zettlemoyer. <br>
+  Annual Meeting of the Association for Computational Linguistics (ACL), 2017. <br>
+  	<a href="https://github.com/luheng/deep_srl">[code]</a>
+	<a href="files/deep_srl_slides_short.pdf">[slides (short)]</a>
+	<a href="files/deep_srl_slides_long.pdf">[slides (long)]</a>
+	<a data-toggle="collapse" data-target="#acl2017_hllz_bib">[bibtex]</a>
+  </p>
+	<div id="acl2017_hllz_bib" class="collapse"> 
+		@inproceedings{he2017deep, <br>
+			title={Deep Semantic Role Labeling: What Works and What’s Next}, <br>
+			author={He, Luheng and Lee, Kenton and Lewis, Mike and Zettlemoyer, Luke}, <br>
+			booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics}, <br>
+			year={2017} <br>
+		}
+		<br> 
+	 </div>
+
+  <p>
+  <a href="files/emnlp2015_lhz.pdf">Joint A<sup>∗</sup> CCG Parsing and Semantic Role Labeling</a><br>
+   Mike Lewis, <b>Luheng He</b>, and Luke Zettlemoyer. <br>
+  Conference on Empirical Methods in Natural Language Processing (EMNLP), 2015. <br>
+    <a href="https://github.com/uwnlp/EasySRL">[Mike's code]</a>
+  </p>
 
 
+  <h3>Natural-language-driven Annotations for Semantics</h3> 
+
+  <p>
+  <a href="https://arxiv.org/abs/1711.05885">Crowdsourcing Question-Answer Meaning Representations</a><br>
+  Julian Michael, Gabriel Stanovsky, <b>Luheng He</b>, Ido Dagan, and Luke Zettlemoyer. <br>
+  Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL), 2018. <br>
+	<a data-toggle="collapse" data-target="#naacl2018_mshdz_bib">[bibtex]</a>
+  </p>
+	<div id="naacl2018_mshdz_bib" class="collapse">
+        @inproceedings{michael2018crowdsourcing, <br>
+  			title={Crowdsourcing Question-Answer Meaning Representations}, <br>
+  			author={Julian Michael and Gabriel Stanovsky and Luheng He and Ido Dagan and Luke S. Zettlemoyer}, <br>
+            booktitle={Proceedings of the 2018 Annual Conference of the North American Chapter of the Association for Computational Linguistics}, <br>
+            year={2018} <br>
+        }
+        <br>
+     </div>
+
+
+  <p>
+  <a href="files/emnlp2016_hmlz.pdf">Human-in-the-Loop Parsing</a><br>
+  <b>Luheng He</b>, Julian Michael, Mike Lewis, and Luke Zettlemoyer. <br>
+  Conference on Empirical Methods in Natural Language Processing (EMNLP), 2016. <br>
+  	<a href="https://github.com/uwnlp/hitl_parsing">[code]</a>
+	<a href="files/emnlp2016_hitl_parsing.pdf">[slides]</a>
+	<a data-toggle="collapse" data-target="#emnlp2016_hmlz_bib">[bibtex]</a>
+  </p>
+	<div id="emnlp2016_hmlz_bib" class="collapse"> 
+		@inproceedings{he2016human, <br>
+			title={Human-in-the-Loop Parsing}, <br>
+			author={He, Luheng and Michael, Julian and Lewis, Mike and Zettlemoyer, Luke} <br>
+			booktitle={Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing}, <br>
+			year={2016} <br>
+		} 
+		<br>
+	 </div>
+
+  <p>
+  <a href="files/emnlp2015_hlz.pdf">Question-Answer Driven Semantic Role Labeling: Using Natural Language to Annotate Natural Language</a><br>
+  <b>Luheng He</b>, Mike Lewis, and Luke Zettlemoyer. <br>
+  Conference on Empirical Methods in Natural Language Processing (EMNLP), 2015. <br>
+	  <a href="https://dada.cs.washington.edu/qasrl">[project homepage]</a>
+	  <a href="https://github.com/uwnlp/qasrl_annotation">[code]</a>
+	  <a href="files/qasrl_slides.pdf">[slides]</a>
+  </p>
+
+
+   <h3>Posterior Regularization </h3> 
+  
+  <p>
+  <a href="files/mlnlp2014_lshtz.pdf">Multi-Label Learning with Posterior Regularization</a> <br>
+  Xi Victoria Lin, Sameer Singh, <b>Luheng He</b>, Ben Taskar and Luke Zettlemoyer <br>
+  NIPS Workshop on Modern Machine Learning and Natural Language Processing, 2014. <br>
+  </p>
+  
+  
+  <p>
+  <a href="files/conll2013.pdf">Graph-Based Posterior Regularization for Semi-Supervised Structured Prediction</a><br>
+  <b>Luheng He</b>, Jennifer Gillenwater, and Ben Taskar. <br>
+  Conference on Computational Natural Language Learning (CoNLL), 2013. <br>
+  <a href="https://github.com/luheng/pr-graph">[code]</a>
+  <a href="files/conll2013-supplement.pdf">[supplement]</a>
+  <a href="files/graph_pr_slides.pdf">[slides (for nwnlp 2014)]</a> <br>
+  </p>
+
+	 <h3>Recommender Systems </h3> 
+
+
+  <p>
+  <a href="files/tist2013.pdf">Social Temporal Collaborative Ranking for Context Aware Movie Recommendation</a><br>
+  Nathan N. Liu, <b>Luheng He</b>, and Qiang Yang. <br>
+  ACM Transactions on Intelligent Systems and Technology (TIST), 2013. <br>
+  </p>
+
+  <p>
+  <a href="files/aaai2011.pdf">Active Dual Collaborative Filtering with Both Item and Attribute Feedback</a><br>
+  <b>Luheng He</b>, Nathan N. Liu, and Qiang Yang. <br>
+  AAAI Conference on Artificial Intelligence, 2011. <br>
+  </p>
+</div><!-- /.simple -->
+</div><!-- /.container -->
+
+
+<div class="container" id="personal">
+  <div class="simple">
+  <h2>Personal</h2>
+	Bouldering :) 
+  </div>
+</div>  
+
+<!--div class="dev">
+  <h2>Demos Under Development</h2>
+  <a href="depvis/depvis.html">Dependency Tree Visualization</a><br>
+</div -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--script src="assets/js/ie10-viewport-bug-workaround.js"></script-->
+
+</body>
+</html>

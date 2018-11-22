@@ -1,0 +1,13 @@
+sentences = [
+	{"id": 1,
+	"words"   : [ "Then", "a", "second", "explosion", "occurred" ], 
+	 "tags"    : [ "RB", "DT", "JJ", "NN", "VBD"],
+	 "gold"    : [ 5, 4, 4, 5, 0],
+	}
+	,
+	{"id": 2,
+	"words"   : [ "Now", "producers", "hope", "price", "have", "hit", "bottom" ], 
+	 "tags"    : [ "RB", "NNS", "VBP", "NNS", "VBP", "VBN", "NN"],
+	 "gold"	   : [ 3, 3, 0, 5, 3, 5, 6],
+	}
+];
